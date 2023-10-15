@@ -1,0 +1,46 @@
+﻿@model RoboTrue.Core.Entities.SatinAlinanUrun
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+
+<h4>SatinAlinanUrun</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="UrunAdi" class="control-label"></label>
+                <input asp-for="UrunAdi" class="form-control" />
+                <span asp-validation-for="UrunAdi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AlisFiyati" class="control-label"></label>
+                <input asp-for="AlisFiyati" class="form-control" />
+                <span asp-validation-for="AlisFiyati" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="CreateDate" class="control-label"></label>
+                <input asp-for="CreateDate" class="form-control" />
+                <span asp-validation-for="CreateDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OlusturanKullaniciId" class="control-label"></label>
+                <input asp-for="OlusturanKullaniciId" class="form-control" />
+                <span asp-validation-for="OlusturanKullaniciId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Kaydet" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Geri Dön</a>
+</div>
+

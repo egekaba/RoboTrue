@@ -1,0 +1,42 @@
+﻿@model RoboTrue.Core.Entities.SozlesmeDurum
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SozlesmeDurum</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SozlesmeDurumu)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SozlesmeDurumu)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SozlesmeBaslangıcTarihi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SozlesmeBaslangıcTarihi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SozlesmeBitis)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SozlesmeBitis)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CreateDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CreateDate)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Düzenle</a> |
+    <a asp-action="Index">Geri Dön</a>
+</div>

@@ -1,0 +1,199 @@
+﻿@model RoboTrue.Core.Entities.Cari
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Sil</h2>
+
+<h3>Silmek istediğine emin misin?</h3>
+<div>
+    <h4>Cari</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CariKodu)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CariKodu)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CariUnvani)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CariUnvani)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CariTipi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CariTipi.SirketTipi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FaliyetSektoru)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FaliyetSektoru.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VerigiDairesi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VerigiDairesi.VergiDairesiAdi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VergiNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VergiNo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VatandasNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VatandasNo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OzelKod)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OzelKod)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CariAdresCesit)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CariAdresCesit.AdresCesidi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AdresAd)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AdresAd)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AdresSoyisim)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AdresSoyisim)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Adres1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Adres1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Adres2)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Adres2)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Adres3)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Adres3)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Sehir)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Sehir.SehirAdi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PostaKodu)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PostaKodu)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Ilce)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ilce.IlceAdi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Ulke)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ulke.Ulkeler)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TelefonCesit)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TelefonCesit.TelefonCesiti)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TelefonAdi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TelefonAdi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TelUlkeKodu)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TelUlkeKodu.UlkeKodlari)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TelNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TelNo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Aktiflik)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Aktiflik)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bloke)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Bloke)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CalismaDovizi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CalismaDovizi.DovizCesitleri)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SgkNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SgkNo)
+        </dd>
+       
+        <dd>
+            @Html.DisplayFor(model => model.SatilanUrunleri.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CreateDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CreateDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OlusturanKullaniciId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OlusturanKullaniciId)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Sil" class="btn btn-default" /> |
+        <a asp-action="Index">Geri Dön</a>
+    </form>
+</div>

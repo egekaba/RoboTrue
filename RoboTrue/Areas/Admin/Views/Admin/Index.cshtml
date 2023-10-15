@@ -1,0 +1,45 @@
+﻿@model IEnumerable<RoboTrue.Core.Entities.Depo>
+@{
+    ViewData["Title"] = "Login";
+    Layout = "_Layout";
+}
+<h1>Hoş Geldin @User.Identity.Name .
+</h1>
+
+Raporlar;
+
+<table class="table">
+
+    <div class="row">
+
+        <div class="col-md-4">
+
+            <a asp-controller="SatinAlinanUrunler" asp-action="Index">Satin Alınan Ürün Sayısı:</a>
+            <output>@ViewBag.SatinAlinanUrunler</output>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+
+            <a asp-controller="SatilanUrunler" asp-action="Index">Satilan Ürün Sayısı:</a>
+            <output>@ViewBag.SatilanUrunler</output>
+
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+
+            
+            <output>@ViewBag.DepodakiUrunler</output>
+        
+
+        </div>
+
+    </div>
+
+    </div>
+
+    </table>
+

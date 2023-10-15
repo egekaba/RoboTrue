@@ -1,0 +1,22 @@
+﻿@using RoboTrue.Core.Entities
+@model IEnumerable<Menu>
+
+@foreach (var item in Model)
+{
+
+    <li class="nav-item active">
+        <a class="nav-link" asp-area="@item.Area" asp-controller="@item.Controller" asp-action="@item.Action">
+            <i class="@item.Icon"></i>
+            <span>@item.MenuAdi</span>
+        </a>
+    </li>
+}    
+
+@* 
+
+<li class="nav-item active">
+    <a class="nav-link" href="index.html">
+        <i class="fas fa-fw fa-tachometer-alt"></i>
+        <span>Dashboard</span>
+    </a>
+</li> *@

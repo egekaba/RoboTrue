@@ -1,0 +1,46 @@
+﻿@model RoboTrue.Core.Entities.SozlesmeDurum
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+
+<h4>SozlesmeDurum</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="SozlesmeDurumu" class="control-label"></label>
+                <input asp-for="SozlesmeDurumu" class="form-control" />
+                <span asp-validation-for="SozlesmeDurumu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SozlesmeBaslangıcTarihi" class="control-label"></label>
+                <input asp-for="SozlesmeBaslangıcTarihi" class="form-control" />
+                <span asp-validation-for="SozlesmeBaslangıcTarihi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SozlesmeBitis" class="control-label"></label>
+                <input asp-for="SozlesmeBitis" class="form-control" />
+                <span asp-validation-for="SozlesmeBitis" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="CreateDate" class="control-label"></label>
+                <input asp-for="CreateDate" class="form-control" />
+                <span asp-validation-for="CreateDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Kaydet" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Geri Dön</a>
+</div>
+

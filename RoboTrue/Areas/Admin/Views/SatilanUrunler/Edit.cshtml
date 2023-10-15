@@ -1,0 +1,56 @@
+﻿@model RoboTrue.Core.Entities.SatilanUrunler
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+<h4>SatilanUrunler</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="UrunKodu" class="control-label"></label>
+                <input asp-for="UrunKodu" class="form-control" />
+                <span asp-validation-for="UrunKodu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UrunFiyati" class="control-label"></label>
+                <input asp-for="UrunFiyati" class="form-control" />
+                <span asp-validation-for="UrunFiyati" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DovizCesidiId" class="control-label"></label>
+                <input asp-for="DovizCesidiId" class="form-control" />
+                <span asp-validation-for="DovizCesidiId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Kdv" class="control-label"></label>
+                <input asp-for="Kdv" class="form-control" />
+                <span asp-validation-for="Kdv" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SatilanCarilerId" class="control-label"></label>
+                <input asp-for="SatilanCarilerId" class="form-control" />
+                <span asp-validation-for="SatilanCarilerId" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="CreateDate" class="control-label"></label>
+                <input asp-for="CreateDate" class="form-control" />
+                <span asp-validation-for="CreateDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Kaydet" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Geri Dön</a>
+</div>
+

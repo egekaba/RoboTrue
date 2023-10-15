@@ -1,0 +1,154 @@
+﻿@model RoboTrue.Core.Entities.Cari
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<h4>Cari</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CariKodu" class="control-label"></label>
+                <input asp-for="CariKodu" value="@ViewBag.CariKoduId" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="CariUnvani" class="control-label"></label>
+                <input asp-for="CariUnvani" class="form-control" />
+                <span asp-validation-for="CariUnvani" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CariTipiId" class="control-label"></label>
+                <select asp-for="CariTipiId" class ="form-control" asp-items="ViewBag.CariTipiId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="FaliyetSektoruId" class="control-label"></label>
+                <select asp-for="FaliyetSektoruId" class="form-control" asp-items="ViewBag.FaliyetSektoruId"></select><a asp-controller="CariFaliyetSektorus" asp-action="Create">Create</a>
+
+            </div>
+            <div class="form-group">
+                <label asp-for="VerigiDairesiId" class="control-label"></label>
+                <select asp-for="VerigiDairesiId" class ="form-control" asp-items="ViewBag.VerigiDairesiId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="VergiNo" class="control-label"></label>
+                <input asp-for="VergiNo" class="form-control" />
+                <span asp-validation-for="VergiNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VatandasNo" class="control-label"></label>
+                <input asp-for="VatandasNo" class="form-control" />
+                <span asp-validation-for="VatandasNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OzelKod" class="control-label"></label>
+                <input asp-for="OzelKod" class="form-control" />
+                <span asp-validation-for="OzelKod" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CariAdresCesitId" class="control-label"></label>
+                <select asp-for="CariAdresCesitId" class ="form-control" asp-items="ViewBag.CariAdresCesitId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="AdresAd" class="control-label"></label>
+                <input asp-for="AdresAd" class="form-control" />
+                <span asp-validation-for="AdresAd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AdresSoyisim" class="control-label"></label>
+                <input asp-for="AdresSoyisim" class="form-control" />
+                <span asp-validation-for="AdresSoyisim" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adres1" class="control-label"></label>
+                <input asp-for="Adres1" class="form-control" />
+                <span asp-validation-for="Adres1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adres2" class="control-label"></label>
+                <input asp-for="Adres2" class="form-control" />
+                <span asp-validation-for="Adres2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adres3" class="control-label"></label>
+                <input asp-for="Adres3" class="form-control" />
+                <span asp-validation-for="Adres3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SehirId" class="control-label"></label>
+                <select asp-for="SehirId" class ="form-control" asp-items="ViewBag.SehirId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="PostaKodu" class="control-label"></label>
+                <input asp-for="PostaKodu" class="form-control" />
+                <span asp-validation-for="PostaKodu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IlceId" class="control-label"></label>
+                <select asp-for="IlceId" class ="form-control" asp-items="ViewBag.IlceId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="UlkeId" class="control-label"></label>
+                <select asp-for="UlkeId" class ="form-control" asp-items="ViewBag.UlkeId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="TelefonCesitId" class="control-label"></label>
+                <select asp-for="TelefonCesitId" class ="form-control" asp-items="ViewBag.TelefonCesitId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="TelefonAdi" class="control-label"></label>
+                <input asp-for="TelefonAdi" class="form-control" />
+                <span asp-validation-for="TelefonAdi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TelUlkeKoduId" class="control-label"></label>
+                <select asp-for="TelUlkeKoduId" class ="form-control" asp-items="ViewBag.TelUlkeKoduId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="TelNo" class="control-label"></label>
+                <input asp-for="TelNo" class="form-control" />
+                <span asp-validation-for="TelNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Aktiflik" class="control-label"></label>
+                <input asp-for="Aktiflik" class="form-control" />
+                <span asp-validation-for="Aktiflik" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bloke" class="control-label"></label>
+                <input asp-for="Bloke" class="form-control" />
+                <span asp-validation-for="Bloke" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DovizCesidiId" class="control-label"></label>
+                <select asp-for="DovizCesidiId" class ="form-control" asp-items="ViewBag.DovizCesidiId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="SgkNo" class="control-label"></label>
+                <input asp-for="SgkNo" class="form-control" />
+                <span asp-validation-for="SgkNo" class="text-danger"></span>
+            </div>
+         
+            <div class="form-group">
+                <label asp-for="OlusturanKullaniciId" class="control-label"></label>
+                <select asp-for="OlusturanKullaniciId" class="form-control" asp-items="ViewBag.KullaniciId"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Oluştur" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Geri Dön</a>
+</div>
+

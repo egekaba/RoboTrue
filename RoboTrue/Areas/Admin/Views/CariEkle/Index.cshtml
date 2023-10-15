@@ -1,0 +1,57 @@
+﻿@using RoboTrue.DataAcsess.Contexts;
+@model IEnumerable<RoboTrue.Core.Entities.Cari>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<p>
+    <a asp-action="Create">Yeni Oluştur</a>
+</p>
+@using (Html.BeginForm())
+{
+    <form method="">
+        Cari Ara (Cari Unvanı veya Kodu Giriniz...): @Html.TextBox("SearchString")
+        <input type="submit" value="Search" />
+    </form>
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CariKodu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CariUnvani)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Kullanici)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CariKodu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CariUnvani)
+            </td> 
+          
+            <td>
+          
+                    @Html.DisplayFor(modelItem => item.OlusturanKullaniciId)
+
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Düzenle</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Detaylar</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Sil</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

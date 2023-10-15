@@ -1,0 +1,78 @@
+﻿@model IEnumerable<RoboTrue.Core.Entities.SatilanUrunler>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<p>
+    <a asp-action="Create">Yeni Oluştur</a>
+</p>
+@using (Html.BeginForm())
+{
+    <form method="">
+        Ürün Ara (Ürün Adı veya Kodu Giriniz...): @Html.TextBox("SearchString")
+        <input type="submit" value="Search" />
+    </form>
+}
+
+<table class="table">
+    <thead>
+        <tr>
+           
+            <th>
+                @Html.DisplayNameFor(model => model.UrunKodu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UrunFiyati)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DovizCesidiId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Kdv)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SatilanCarilerId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreateDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+        
+            <td>
+                @Html.DisplayFor(modelItem => item.UrunKodu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UrunFiyati)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DovizCesidiId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kdv)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SatilanCarilerId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OlusturanKullaniciId)
+            </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreateDate)
+                </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Düzenle</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Detaylar</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Sil</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

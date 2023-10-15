@@ -1,0 +1,147 @@
+﻿@using RoboTrue.Core.Entities
+@model RoboTrue.UI.Models.KullaniciDto
+@{
+
+    ViewData["Title"] = "Login Page";
+    Layout = "_LoginLayout";
+
+}
+
+
+<body id="pages" class="full-layout no-nav-left no-nav-right  nav-top-fixed background-login     responsive remove-navbar login-layout   clearfix" data-active="pages " data-smooth-scrolling="1">
+    <div class="vd_body">
+        <!-- Header Start -->
+        <!-- Header Ends -->
+        <div class="content">
+            <div class="container">
+
+                <!-- Middle Content Start -->
+
+                <div class="vd_content-wrapper">
+                    <div class="vd_container">  
+                        <div class="vd_content clearfix">
+                            <div class="vd_content-section clearfix">
+                                <div class="vd_login-page">
+                                    <div class="heading clearfix">
+                                        <div class="heading clearfix"></div>
+                                        <div class="heading clearfix"></div>
+                                      
+                                        <h2 class="text-center FontCustom ">RoboTrue</h2>
+                                    </div>
+                             
+                                    <h3 class="text-center FontCustom2 ">Lütfen Giriş Yapınız...</h3>
+                                    <div class="heading clearfix"></div>
+                                    <div class="panel widget">
+                                        <div class="panel-body">
+                                            <form method="post" class="form-horizontal" id="login-form" asp-controller="LoginPanel" asp-action="Login" role="form">
+                                                <div class="alert alert-danger vd_hidden">
+                                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true"><i class="icon-cross"></i></button>
+                                                    <span class="vd_alert-icon"><i class="fa fa-exclamation-circle vd_red"></i></span><strong>Oh snap!</strong> Change a few things up and try submitting again.
+                                                </div>
+                                                <div class="alert alert-success vd_hidden">
+                                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true"><i class="icon-cross"></i></button>
+
+                                                    <span class="vd_alert-icon"><i class="fa fa-check-circle vd_green"></i></span><strong>Well done!</strong>.
+                                                </div>
+
+                                                <div class="form-group  mgbt-xs-20">
+
+                                                    <div class="col-md-12">
+                                                        <div class="label-wrapper sr-only">
+                                                            <label class="control-label" for="email">Email</label>
+                                                        </div>
+                                                        <div class="text FontCustom2">Email</div>
+                                                        <div class="vd_input-wrapper" id="email-input-wrapper">
+                                                            <span class="menu-icon"> <h3 class="fa fa-envelope"></h3> </span>
+                                                            <input placeholder="Email" asp-for=@Model.Email>
+                                                            <span asp-validation-for="Email" class="text-danger"></span>
+                                                        </div>
+                                                        <div class="label-wrapper">
+                                                            <label class="control-label sr-only" for="password">Sifre</label>
+                                                        </div>
+                                                        <div class="text FontCustom2">Password</div>
+                                                        <div class="vd_input-wrapper" id="password-input-wrapper">
+                                                            <span class="menu-icon"> <h2 class="fa fa-lock"></h2> </span>
+                                                            <input placeholder="Şifreniz" asp-for=@Model.Sifre>
+                                                            <span asp-validation-for="Sifre" class="text-danger"></span>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div id="vd_login-error" class="alert alert-danger hidden"><i class="fa fa-exclamation-circle fa-fw"></i> Please fill the necessary field </div>
+                                                <div class="form-group">
+                                                    <div class="col-md-12">
+                                                        <div class="row">
+                                                            <div class="col-xs-6">
+                                                                <div class="form-check checkbox-success">
+                                                                    <div class="input-group mb-3">
+
+                                                                        <label> <input type="checkbox" asp-for="RememberMe" class="form-control-sm" /><a class="FontCustom2"> Beni Hatırla(i)</a></label>
+
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                           
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="col-md-12 text-center mgbt-xs-5">
+                                                        <button class="btn btn-success" type="submit">Oturum Aç</button>
+                                            </form>
+
+                                        
+                                        </div>
+                             
+                                        </div>
+                                          
+                                        </div>
+
+                                </div>
+
+                            </div>
+                            <!-- vd_login-page -->
+
+                        </div>
+                        <!-- .vd_content-section -->
+
+                    </div>
+                    <!-- .vd_content -->
+                </div>
+                <!-- .vd_container -->
+            </div>
+            <!-- .vd_content-wrapper -->
+            <!-- Middle Content End -->
+
+        </div>
+        <!-- .container -->
+    </div>
+    <!-- .content -->
+    <!-- Footer Start -->
+    <footer class="footer-2" id="footer">
+        <div class="vd_bottom ">
+            <div class="container">
+                <div class="row">
+                    <div class=" col-xs-12">
+                        <div>
+                        </div>
+                    </div>
+                </div><!-- row -->
+            </div><!-- container -->
+        </div>
+    </footer>
+    <!-- Footer END -->
+    </div>
+
+    <!-- .vd_body END  -->
+    <a id="back-top" href="#" data-action="backtop" class="vd_back-top visible"> <i class="fa  fa-angle-up"> </i> </a>
+    <!--
+    <a class="back-top" href="#" id="back-top"> <i class="icon-chevron-up icon-white"> </i> </a> -->
+    <!-- Javascript =============================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- Specific Page Scripts END -->
+    <!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information. -->
+
+
+</body>
